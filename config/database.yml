@@ -50,5 +50,6 @@ test:
 production:
   <<: *default
   database: unipon2_production
-  username: unipon2
-  password: <%= ENV['UNIPON2_DATABASE_PASSWORD'] %>
+  username: root
+  password: <%= ENV['DATABASE_PASSWORD'] %>
+  socket: /var/lib/mysql/mysql.sock
