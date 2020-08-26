@@ -2,7 +2,11 @@
   height: 200px;
   width: 100vw;
   background-color: purple;
+  display: table-cell;
+  vertical-align: middle;
   .userpic {
-    padding: 0 0 0 20px;
+    padding-left: 20px;
+    font-size: 30px;
+    color: white;
   }
 }
