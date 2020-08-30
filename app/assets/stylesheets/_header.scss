@@ -2,23 +2,13 @@
   height: 200px;
   width: 100vw;
   background-color: purple;
-  display: table-cell;
-  vertical-align: middle;
 
   .userface {
-    height: 100px;
-    width: 100px;
-    padding-left: 20px;
+    padding: 20px 0 0 20px;
     font-size: 50px;
     color: white;
     img {
       width: 200px;
     }
-  }
-
-  .logo {
-    font-size: 50px;
-    color: white;
-    text-align: center;
   }
 }
