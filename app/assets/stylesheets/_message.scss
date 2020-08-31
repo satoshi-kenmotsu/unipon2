@@ -12,5 +12,21 @@
         margin: 40px;
       }
     }
+    .contents {
+      padding: 20px;
+      .takername {
+        font-weight: bold;
+        font-size: x-large;
+      }
+      .letter {
+        padding: 10px;
+      }
+      .credo {
+        padding: 10px;
+      }
+      .like {
+        padding: 10px;
+      }
+    }
   }
 }
