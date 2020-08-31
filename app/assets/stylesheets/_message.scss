@@ -1,10 +1,14 @@
-.message {
-  background-color: darkred;
-  height: calc(100vh - 400px);
-  width: 100vw;
-  .takerface {
-    background-color: green;
-    height: 50px;
-    width: 30px;
+.messages {
+  .message {
+    background-color: rgb(235, 233, 233);
+    height: calc(100vh - 400px);
+    width: 100vw;
+    display: flex;
+    .takerface {
+      img {
+        width: 200px;
+        margin: 30px;
+      }
+    }
   }
 }
