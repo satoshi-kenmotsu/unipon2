@@ -2,6 +2,7 @@
   height: 200px;
   width: 100vw;
   background-color: rgb(209, 207, 207);
+  display: flex;
 
   .userface {
     padding: 20px 0 0 20px;
@@ -10,5 +11,10 @@
     img {
       width: 200px;
     }
+  }
+  .username {
+    padding: 20px;
+    font-size: x-large;
+    font-weight: bold;
   }
 }
