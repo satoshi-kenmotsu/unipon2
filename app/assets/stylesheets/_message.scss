@@ -1,13 +1,15 @@
 .messages {
   .message {
-    background-color: rgb(235, 233, 233);
-    height: calc(100vh - 400px);
+    background-color: white;
+    height: calc(100vh - 1600px);
     width: 100vw;
     display: flex;
+    border: solid 10px;
+    border-color: pink;
     .takerface {
       img {
-        width: 200px;
-        margin: 30px;
+        width: 400px;
+        margin: 40px;
       }
     }
   }
