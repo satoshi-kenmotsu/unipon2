@@ -25,3 +25,12 @@
         ＃仕事好き ＃親身心 ＃人生を変える
       .like
         いいね！
+
+  .form
+    = form_for [@user, @message] do |f|
+      = f.text_field :content, class: 'form__message', placeholder: 'type a message'
+      .form__mask
+        = f.label :image, class: 'form__mask__image' do
+          = icon('fas', 'image', class: 'icon')
+          = f.file_field :image, class: 'hidden'
+      = f.submit 'Send', class: 'form__submit'
