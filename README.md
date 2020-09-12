@@ -44,6 +44,8 @@ has_many :messages
 ### Association
 belongs_to :messages_users
 belongs_to :user
+belongs_to :send_id
+belongs_to :receive_id
 
 ## messages_usersテーブル
 |Column|Type|Options|
