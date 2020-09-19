@@ -1,9 +1,9 @@
 class MessagesController < ApplicationController
-  before_action :set_user
+  before_action :set_user, except: :index
 
   def index
     @message = Message.new
-    @messages = @user.messages.includes(:user)
+    @messages = current_user.messages.includes(:user)
   end
 
   def create

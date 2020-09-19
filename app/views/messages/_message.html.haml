@@ -27,7 +27,7 @@
         いいね！
 
   .form
-    = form_for [@user, @message] do |f|
+    = form_for [current_user, @message] do |f|
       = f.text_field :content, class: 'form__message', placeholder: 'type a message'
       .form__mask
         = f.label :image, class: 'form__mask__image' do
