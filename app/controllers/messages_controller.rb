@@ -1,5 +1,5 @@
 class MessagesController < ApplicationController
-  before_action :set_user, except: :index
+  before_action :set_user, only: %i[create]
 
   def index
     @message = Message.new
