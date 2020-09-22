@@ -1,5 +1,5 @@
 class MessagesController < ApplicationController
-  before_action :set_user, only: %i[create]
+  before_action :set_user, only: %i[show]
 
   def index
     @message = Message.new
@@ -7,7 +7,7 @@ class MessagesController < ApplicationController
   end
 
   def create
-    @message = @user.messages.new(message_params)
+    @message = current_user.messages.new(message_params)
     if @message.save
       redirect_to user_messages_path(@user), notice: 'メッセージが送信されました'
     else
@@ -15,6 +15,9 @@ class MessagesController < ApplicationController
       flash.now[:alert] = 'メッセージを入力してください。'
       render :index
     end
+  end
+
+  def show
   end
 
   private
