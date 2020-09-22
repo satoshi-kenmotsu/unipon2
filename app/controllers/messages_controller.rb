@@ -1,5 +1,5 @@
 class MessagesController < ApplicationController
-  before_action :set_user, only: %i[show]
+  before_action :set_user, only: %i[create]
 
   def index
     @message = Message.new
@@ -15,9 +15,6 @@ class MessagesController < ApplicationController
       flash.now[:alert] = 'メッセージを入力してください。'
       render :index
     end
-  end
-
-  def show
   end
 
   private
