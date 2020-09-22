@@ -1,17 +1,16 @@
 .messages
 
   .message
-    .takerface
-      %img{alt: "userface", src: "https://imgc.eximg.jp/i=https%253A%252F%252Fs.eximg.jp%252Fexnews%252Ffeed%252FRen_ai%252FRen_ai_188420_6aed_1.jpg,zoom=600,quality=70,type=jpg"}/
-    .contents
-      .takername
-        ミシェル・アンジェリーナ さんへ
-      .letter
-        いつもサポートしてくれてありがとうございます！おかげさまで仕事がはかどります！
-      .credo
-        ＃仕事好き ＃親身心 ＃人生を変える
-      .like
-        いいね！
+    .upper-message
+      .upper-message__user-name
+        = current_user.name
+      .upper-message__date
+        = @message.created_at.strftime("%Y年%m月%d日 %H時%M分")
+    .lower-message
+      - if message.content.present?
+        %p.lower-message__content
+          = message.content
+      = image_tag message.image.url, class: 'lower-message__image' if message.image.present?
 
   .message
     .takerface
