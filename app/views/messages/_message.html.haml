@@ -1,15 +1,16 @@
 .messages
+  - @messages.each do |message|
 
-  .message
-    .upper-message
-      .upper-message__user-name
-        = current_user.name
-      .upper-message__date
-        = @message.created_at
-    .lower-message
-      - if @message.content.present?
-        %p.lower-message__content
-          = @message.content
+    .message
+      .upper-message
+        .takername
+          = current_user.name
+        .upper-message__date
+          = message.created_at
+      .lower-message
+        - if message.content.present?
+          %p.lower-message__content
+            = message.content
 
   .message
     .takerface
