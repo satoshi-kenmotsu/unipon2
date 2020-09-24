@@ -9,4 +9,7 @@ class User < ApplicationRecord
   has_many :messages
   has_many :likes
   has_many :liked_messages, through: :likes, source: :message
+  def already_liked?(message)
+    self.likes.exists?(message_id: message.id)
+  end
 end
