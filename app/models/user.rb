@@ -7,4 +7,6 @@ class User < ApplicationRecord
   validates :name, presence: true, uniqueness: true
 
   has_many :messages
+  has_many :likes
+  has_many :liked_messages, through: :likes, source: :message
 end
