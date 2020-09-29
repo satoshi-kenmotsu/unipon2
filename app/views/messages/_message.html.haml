@@ -21,6 +21,11 @@
             = button_to 'いいね', user_message_likes_path(current_user.id,m.id), method: :post
       .message__date
         = m.created_at.strftime("%Y年%m月%d日 %H時%M分")
+      .more
+        %span= image_tag 'arrow_top.png'
+        %ul.more_list
+          %li
+            = link_to '削除', user_message_path(current_user.id,m.id), method: :delete
 
   .message
     .takerface
