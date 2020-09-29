@@ -8,8 +8,13 @@ class User < ApplicationRecord
 
   has_many :messages
   has_many :likes
-  has_many :liked_messages, through: :likes, source: :message
-  def already_liked?(message)
-    self.likes.exists?(message_id: message.id)
+  has_many :favorites, through: :likes, source: :message
+
+  def already_like_this?(clicked_message)
+    self.favorites.include?(clicked_message)
+  end
+
+  def like_this(clicked_message)
+    self.likes.find_or_create_by(message_id: clicked_message.id)
   end
 end
