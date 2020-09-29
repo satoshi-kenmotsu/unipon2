@@ -4,11 +4,13 @@ class LikesController < ApplicationController
       current_user.like_this(clicked_message)
       flash[:success] = '投稿に「いいね！」しました。'
       redirect_back(fallback_location: root_path)
-    else
-      flash[:alert] = 'すでに「いいね！」しています'
-      redirect_back(fallback_location: root_path)
-      # 「いいね！」削除ボタンを実装すると、↑上記の2行は不要になります
     end
+  end
+
+  def destroy
+    current_user.likes.find_by(message_id: params[:message_id]).destroy
+    flash[:danger] = '「いいね！」を解除しました。'
+    redirect_back(fallback_location: root_path)
   end
 
   private
