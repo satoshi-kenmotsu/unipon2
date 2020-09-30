@@ -17,6 +17,12 @@ class MessagesController < ApplicationController
   end
 
   def destroy
+    message = Message.find(params[:id])
+    message.destroy
+  end
+
+  def edit
+    @message = Message.find(params[:id])
   end
 
   private

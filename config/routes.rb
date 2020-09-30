@@ -2,7 +2,7 @@ Rails.application.routes.draw do
   devise_for :users
   root 'messages#index'
   resources :users, only: [:edit, :update] do
-    resources :messages, only: [:index, :create, :destroy] do
+    resources :messages, only: [:index, :create, :destroy, :edit] do
       resources :likes, only: [:create, :destroy]
     end
   end
