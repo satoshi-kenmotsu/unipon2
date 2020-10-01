@@ -13,6 +13,7 @@
               = m.content
         .credo
           ＃仕事好き ＃親身心 ＃人生を変える
+
         .like
           - if current_user.already_like_this?(m)
             - like = current_user.likes.find_by(message_id: m.id)
@@ -21,6 +22,8 @@
           - else
             = button_to 'いいね', user_message_likes_path(current_user.id,m.id), method: :post
             %i.far.fa-heart.like-btn
+          = m.likes.count
+
       .message__date
         = m.created_at.strftime("%Y年%m月%d日 %H時%M分")
       .more
