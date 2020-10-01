@@ -6,8 +6,8 @@ class User < ApplicationRecord
 
   validates :name, presence: true, uniqueness: true
 
-  has_many :messages
-  has_many :likes
+  has_many :messages, dependent: :destroy
+  has_many :likes, dependent: :destroy
   has_many :favorites, through: :likes, source: :message
 
   def already_like_this?(clicked_message)

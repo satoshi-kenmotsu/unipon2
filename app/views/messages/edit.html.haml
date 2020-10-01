@@ -1,0 +1,7 @@
+.contents.row
+  .container
+    = form_for [current_user, @message] do |f|
+      %h3
+        編集する
+      = f.text_area :content, placeholder: "text" , rows: "10"
+      = f.submit "SEND"
