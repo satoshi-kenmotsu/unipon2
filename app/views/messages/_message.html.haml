@@ -49,9 +49,6 @@
 
   .form
     = form_for [current_user, @message] do |f|
-      = f.text_field :content, class: 'form__message', placeholder: 'type a message'
-      .form__mask
-        = f.label :image, class: 'form__mask__image' do
-          = icon('fas', 'image', class: 'icon')
-          = f.file_field :image, class: 'hidden'
-      = f.submit 'Send', class: 'form__submit'
+      = f.text_field :content, class: 'form__title', placeholder: '仲間の名前'
+      = f.text_area :content, class: 'form__message', placeholder: 'メッセージ'
+      = f.submit 'おくる', class: 'form__submit'
