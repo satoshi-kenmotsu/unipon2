@@ -8,7 +8,9 @@ class MessagesController < ApplicationController
   def create
     @message = current_user.messages.new(message_params)
     if @message.save
-      redirect_to user_messages_path(current_user), notice: 'メッセージが送信されました'
+      respond_to do |format|
+        format.json
+      end
     else
       @messages = current_user.messages
       flash.now[:alert] = 'メッセージを入力してください。'
