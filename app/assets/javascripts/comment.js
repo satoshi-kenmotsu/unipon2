@@ -1,44 +1,32 @@
 $(function(){
 
-  function buildHTML(message){
-    if ( message.image ) {
+  function buildHTML(m){
+    if ( m.content ) {
       var html =
        `<div class="message">
-          <div class="upper-message">
-            <div class="upper-message__user-name">
-              ${message.user_name}
+          <div class="takerface">
+            <img src=${"https://imgc.eximg.jp/i=https%253A%252F%252Fs.eximg.jp%252Fexnews%252Ffeed%252FRen_ai%252FRen_ai_188420_6aed_1.jpg,zoom=600,quality=70,type=jpg"} >
+          </div>
+          <div class="contents">
+            <div class="takername">
+              ${m.user_name + " さんへ"}
             </div>
-            <div class="upper-message__date">
-              ${message.created_at}
+            <div class="letter">
+              <p class="lower-message__content">
+                ${m.content}
+              </p>
+            </div>
+            <div class="credo">
+              ＃仕事好き ＃親身心 ＃人生を変える
             </div>
           </div>
-          <div class="lower-message">
-            <p class="lower-message__content">
-              ${message.content}
-            </p>
-          </div>
-          <img src=${message.image} >
-        </div>`
-      return html;
-    } else {
-      var html =
-       `<div class="message">
-          <div class="upper-message">
-            <div class="upper-message__user-name">
-              ${message.user_name}
-            </div>
-            <div class="upper-message__date">
-              ${message.created_at}
-            </div>
-          </div>
-          <div class="lower-message">
-            <p class="lower-message__content">
-              ${message.content}
-            </p>
+
+          <div class="message__date">
+            ${m.created_at}
           </div>
         </div>`
       return html;
-    };
+    }
   }
 
   $('#new_message').on('submit', function(e){
@@ -56,6 +44,8 @@ $(function(){
 
     .done(function(data){
       var html = buildHTML(data);
+      $('.messages').append(html);
+      $('form')[0].reset();
     })
-  });
+  })
 });

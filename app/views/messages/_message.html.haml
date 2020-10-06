@@ -47,8 +47,8 @@
       .like
         いいね！
 
-  .form
-    = form_for [current_user, @message] do |f|
-      = f.text_field :content, class: 'form__title', placeholder: '仲間の名前'
-      = f.text_area :content, class: 'form__message', placeholder: 'メッセージ', rows: "5"
-      = f.submit 'おくる', class: 'form__submit'
+.form
+  = form_for [current_user, @message] do |f|
+    = f.text_field :content, class: 'form__title', placeholder: '仲間の名前'
+    = f.text_area :content, class: 'form__message', placeholder: 'メッセージ', rows: "5"
+    = f.submit 'おくる', class: 'form__submit'
