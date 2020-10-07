@@ -3,7 +3,7 @@ $(function(){
   function buildHTML(m){
     if ( m.content ) {
       var html =
-       <div class="message">
+       `<div class="message">
           <div class="takerface">
             <img src=${"https://imgc.eximg.jp/i=https%253A%252F%252Fs.eximg.jp%252Fexnews%252Ffeed%252FRen_ai%252FRen_ai_188420_6aed_1.jpg,zoom=600,quality=70,type=jpg"} >
           </div>
@@ -24,7 +24,7 @@ $(function(){
           <div class="message__date">
             ${m.created_at}
           </div>
-        </div>
+        </div>`
       return html;
     }
   }
