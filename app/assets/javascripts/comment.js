@@ -33,6 +33,7 @@ $(function(){
     e.preventDefault();
     var formData = new FormData(this);
     var url = $(this).attr('action');
+
     $.ajax({
       url: url,  //同期通信でいう『パス』
       type: 'POST',  //同期通信でいう『HTTPメソッド』
@@ -49,5 +50,10 @@ $(function(){
       $('.messages').animate({ scrollTop: $('.messages')[0].scrollHeight});
       $(".form__submit").removeAttr("disabled");
     })
+
+    .fail(function() {
+      alert("メッセージ送信に失敗しました");
+    });
+
   })
 });
