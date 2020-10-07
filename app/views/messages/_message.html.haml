@@ -39,7 +39,7 @@
       %img{alt: "userface", src: "https://imgc.eximg.jp/i=https%253A%252F%252Fs.eximg.jp%252Fexnews%252Ffeed%252FRen_ai%252FRen_ai_188420_6aed_1.jpg,zoom=600,quality=70,type=jpg"}/
     .contents
       .takername
-        (参考view)アンジェリーナ さんへ
+        (参考view)ミシェル さんへ
       .letter
         いつもサポートしてくれてありがとうございます！おかげさまで仕事がはかどります！
       .credo
@@ -47,8 +47,8 @@
       .like
         いいね！
 
-  .form
-    = form_for [current_user, @message] do |f|
-      = f.text_field :content, class: 'form__title', placeholder: '仲間の名前'
-      = f.text_area :content, class: 'form__message', placeholder: 'メッセージ', rows: "5"
-      = f.submit 'おくる', class: 'form__submit'
+.form
+  = form_for [current_user, @message] do |f|
+    = f.text_field :content, class: 'form__title', placeholder: '仲間の名前'
+    = f.text_area :content, class: 'form__message', placeholder: 'メッセージ', rows: "5"
+    = f.submit 'おくる', class: 'form__submit'
