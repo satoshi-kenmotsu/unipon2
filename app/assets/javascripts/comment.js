@@ -19,6 +19,9 @@ $(function(){
             <div class="credo">
               ＃仕事好き ＃親身心 ＃人生を変える
             </div>
+            <div class="like">
+              ${m.like_count}
+            </div>
           </div>
 
           <div class="message__date">
