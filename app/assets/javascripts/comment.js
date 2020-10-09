@@ -1,7 +1,7 @@
 $(function(){
 
-  function buildHTML(m){
-    if ( m.content ) {
+  function buildHTML(j){
+    if ( j.content ) {
       var html =
        `<div class="message">
           <div class="takerface">
@@ -9,23 +9,23 @@ $(function(){
           </div>
           <div class="contents">
             <div class="takername">
-              ${m.user_name + " さんへ"}
+              ${j.user_name + " さんへ"}
             </div>
             <div class="letter">
               <p class="lower-message__content">
-                ${m.content}
+                ${j.content}
               </p>
             </div>
             <div class="credo">
               ＃仕事好き ＃親身心 ＃人生を変える
             </div>
             <div class="like">
-              ${m.like_count}
+              ${j.like_count}
             </div>
           </div>
 
           <div class="message__date">
-            ${m.created_at}
+            ${j.created_at}
           </div>
         </div>`
       return html;
