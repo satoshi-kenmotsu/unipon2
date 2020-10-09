@@ -19,13 +19,31 @@ $(function(){
             <div class="credo">
               ＃仕事好き ＃親身心 ＃人生を変える
             </div>
+
             <div class="like">
+              <a href="users/${j.user_id}/messages/${j.message_id}/likes" data-method="post">
+                <i class="far fa-heart like-btn">
+                </i>
+              </a>
               ${j.like_count}
             </div>
           </div>
 
           <div class="message__date">
             ${j.created_at}
+          </div>
+          <div class="more">
+            <span>
+              <img_tag=${'arrow_top.png'} %>
+            </span>
+            <ul class="more_list">
+              <li>
+                <a href="users/${j.user_id}/messages/${j.message_id}/edit">編集</a>
+              </li>
+              <li>
+                <a href="users/${j.user_id}/messages/${j.message_id}" data-method="delete">削除</a>
+              </li>
+            </ul>
           </div>
         </div>`
       return html;

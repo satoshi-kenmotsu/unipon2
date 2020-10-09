@@ -30,7 +30,7 @@
         %span= image_tag 'arrow_top.png'
         %ul.more_list
           %li
-            = link_to '編集', edit_user_message_path(current_user.id,m.id), method: :get
+            = link_to '編集', edit_user_message_path(current_user.id,m.id)
           %li
             = link_to '削除', user_message_path(current_user.id,m.id), method: :delete
 
