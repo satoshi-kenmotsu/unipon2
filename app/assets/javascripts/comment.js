@@ -33,9 +33,6 @@ $(function(){
             ${j.created_at}
           </div>
           <div class="more">
-            <span>
-              <img_tag=${'arrow_top.png'} %>
-            </span>
             <ul class="more_list">
               <li>
                 <a href="users/${j.user_id}/messages/${j.message_id}/edit">編集</a>
