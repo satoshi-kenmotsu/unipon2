@@ -1,0 +1,7 @@
+- if current_user.already_like_this?(m)
+  - like = current_user.likes.find_by(message_id: m.id)
+  = link_to user_message_like_path(current_user.id,m.id,like.id), method: :delete, remote: true do
+    %i.fas.fa-heart.unlike-btn
+- else
+  = link_to user_message_likes_path(current_user.id,m.id), method: :post, remote: true do
+    %i.far.fa-heart.like-btn

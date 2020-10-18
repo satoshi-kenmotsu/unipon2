@@ -3,14 +3,18 @@ class LikesController < ApplicationController
     unless current_user.already_like_this?(clicked_message)
       @like = current_user.like_this(clicked_message)
       flash[:success] = '投稿に「いいね！」しました。'
-      redirect_back(fallback_location: root_path)
+      if @like.save
+        respond_to :js
+      end
     end
   end
 
   def destroy
-    current_user.likes.find_by(message_id: params[:message_id]).destroy
+    @like = current_user.likes.find_by(message_id: params[:message_id]).destroy
     flash[:danger] = '「いいね！」を解除しました。'
-    redirect_back(fallback_location: root_path)
+    if @like.destroy
+      respond_to :js
+    end
   end
 
   private
