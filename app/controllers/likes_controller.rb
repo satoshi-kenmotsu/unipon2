@@ -1,7 +1,8 @@
 class LikesController < ApplicationController
   def create
-    unless current_user.already_like_this?(clicked_message)
-      @like = current_user.like_this(clicked_message)
+    @message = clicked_message
+    unless current_user.already_like_this?(@message)
+      @like = current_user.like_this(@message)
       flash[:success] = '投稿に「いいね！」しました。'
       if @like.save
         respond_to :js
@@ -10,6 +11,7 @@ class LikesController < ApplicationController
   end
 
   def destroy
+    @message = clicked_message
     @like = current_user.likes.find_by(message_id: params[:message_id]).destroy
     flash[:danger] = '「いいね！」を解除しました。'
     if @like.destroy
