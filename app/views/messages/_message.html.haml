@@ -15,14 +15,8 @@
           ＃仕事好き ＃親身心 ＃人生を変える
 
         .like
-          - if current_user.already_like_this?(m)
-            - like = current_user.likes.find_by(message_id: m.id)
-            = link_to user_message_like_path(current_user.id,m.id,like.id), method: :delete do
-              %i.fas.fa-heart.unlike-btn
-          - else
-            = link_to user_message_likes_path(current_user.id,m.id), method: :post do
-              %i.far.fa-heart.like-btn
-          = m.likes.count
+          %div{:id => "likes_buttons_#{m.id}"}
+            = render partial: 'likes/like', locals: { m: m}
 
       .message__date
         = m.created_at.strftime("%Y年%m月%d日 %H時%M分")
