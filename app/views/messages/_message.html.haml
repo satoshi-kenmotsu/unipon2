@@ -15,7 +15,7 @@
           ＃仕事好き ＃親身心 ＃人生を変える
 
         .like
-          %div{:id => "likes_buttons_#{@message.id}"}
+          %div{:id => "likes_buttons_#{m.id}"}
             = render partial: 'likes/like', locals: { m: m}
 
       .message__date
