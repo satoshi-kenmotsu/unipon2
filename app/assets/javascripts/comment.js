@@ -19,13 +19,12 @@ $(function(){
             <div class="credo">
               ＃仕事好き ＃親身心 ＃人生を変える
             </div>
-
             <div class="like">
-              <a href="users/${j.user_id}/messages/${j.message_id}/likes" data-method="post">
-                <i class="far fa-heart like-btn">
-                </i>
-              </a>
-              ${j.like_count}
+              <div id="likes_buttons_<%= ${j.message_id} %>">
+                <a href="users/${j.user_id}/messages/${j.message_id}/likes" data-remote="true" data-method="post">
+                  <i class="far fa-heart like-btn"></i>
+                </a>
+              </div>
             </div>
           </div>
 
