@@ -9,7 +9,7 @@ $(function(){
           </div>
           <div class="contents">
             <div class="takername">
-              ${j.user_name + " さんへ"}
+              ${j.takername + " さんへ"}
             </div>
             <div class="letter">
               <p class="lower-message__content">

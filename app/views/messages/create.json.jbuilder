@@ -4,3 +4,4 @@ json.content @message.content
 json.like_count @message.likes.count
 json.message_id @message.id
 json.user_id @message.user.id
+json.takername @message.takername

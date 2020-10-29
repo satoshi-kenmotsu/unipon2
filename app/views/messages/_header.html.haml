@@ -4,3 +4,5 @@
   %h3.username
     = current_user.name
     さんからの"ピアボーナス"（ピア＝仲間、ボーナス＝報酬）スタッフ同士で感謝を送り合うと報酬に反映されるで〜！
+  .logout
+    = link_to 'ログアウト', destroy_user_session_path, method: :delete

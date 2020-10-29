@@ -4,7 +4,7 @@
   .message {
     background-color: white;
     height: calc(100vh - 1700px);
-    width: 100vw;
+    width: 95vw;
     display: flex;
     border: solid 10px;
     border-color: pink;
@@ -25,6 +25,7 @@
       }
       .credo {
         padding: 10px;
+        color: red;
       }
       .like {
         padding: 10px;
