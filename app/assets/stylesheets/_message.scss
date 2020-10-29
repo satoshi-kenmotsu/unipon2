@@ -6,8 +6,8 @@
   align-items: center;
   .message {
     background-color: white;
-    height: calc(100vh - 1700px);
-    width: 80vw;
+    height: calc(min-100vh - 1700px);
+    width: 95vw;
     display: flex;
     border: solid 10px;
     border-color: pink;
@@ -52,5 +52,17 @@
     }
     .more {
     }
+  }
+}
+
+.form {
+  font-size: xx-large;
+  .form__title {
+
+  }
+  .form__message {
+
+  }
+  .form__submit {
   }
 }
