@@ -22,6 +22,9 @@
       .takername {
         font-weight: bold;
         font-size: xx-large;
+        span {
+          font-size: x-large;
+        }
       }
       .letter {
         font-size: x-large;
@@ -33,16 +36,26 @@
         color: red;
       }
       .like {
-        width: 25px;
-        height: 30px;
-        font-size: 40px;
         margin: 10px;
-        .like-btn {
-          color: #808080; 
-        }
-        .unlike-btn {
-          color: #e54747;
-        }
+        width: 80px;
+      }
+      .like-btn {
+        font-size: 40px;
+        color: #808080;
+      }
+      .unlike-btn {
+        font-size: 40px;
+        color: #e54747;
+      }
+      .likescount {
+        font-size: xx-large;
+        float: right;
+        color: hotpink;
+      }
+      .unlikescount {
+        font-size: xx-large;
+        float: right;
+        color: #808080;
       }
     }
     .message__date {
