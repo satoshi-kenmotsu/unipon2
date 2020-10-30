@@ -14,31 +14,18 @@
               = m.content
         .credo
           ＃エンジニア転職 ＃仲間好き ＃人生を変える ＃Inside Story
-
-        .like
-          %div{:id => "likes_buttons_#{m.id}"}
-            = render partial: 'likes/like', locals: { m: m}
-
-      .message__date
-        = m.created_at.strftime("%Y年%m月%d日 %H時%M分")
-      .more
-        %ul.more_list
-          %li
-            = link_to '編集', edit_user_message_path(current_user.id,m.id)
-          %li
-            = link_to '削除', user_message_path(current_user.id,m.id), method: :delete
-
-  .message
-    .takerface
-      %img{alt: "userface", src: "https://imgc.eximg.jp/i=https%253A%252F%252Fs.eximg.jp%252Fexnews%252Ffeed%252FRen_ai%252FRen_ai_188420_6aed_1.jpg,zoom=600,quality=70,type=jpg"}/
-    .contents
-      .takername
-        (参考view)ミシェル さんへ
-      .letter
-        いつもサポートしてくれてありがとうございます！おかげさまで仕事がはかどります！
-      .credo
-        ＃仕事好き ＃親身心 ＃人生を変える
-      .like
+        .sub-contents
+          .like
+            %div{:id => "likes_buttons_#{m.id}"}
+              = render partial: 'likes/like', locals: { m: m}
+          .message__date
+            = m.created_at.strftime("%Y年%m月%d日 %H時%M分")
+          .more
+            %ul.more_list
+              %li
+                = link_to '編集', edit_user_message_path(current_user.id,m.id), class: "edit-btn"
+              %li
+                = link_to '削除', user_message_path(current_user.id,m.id), method: :delete, class: "delete-btn"
 
 .form
   = form_for [current_user, @message] do |f|

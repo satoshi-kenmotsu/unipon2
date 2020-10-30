@@ -11,6 +11,7 @@
     display: flex;
     border: solid 10px;
     border-color: pink;
+    align-items: center;
     .takerface {
       img {
         width: 400px;
@@ -35,32 +36,42 @@
         padding: 5px;
         color: red;
       }
-      .like {
-        margin: 10px;
-        width: 80px;
+      .sub-contents {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        .like {
+          margin: 10px;
+          width: 80px;
+        }
+        .like-btn {
+          font-size: 40px;
+          color: #808080;
+        }
+        .unlike-btn {
+          font-size: 40px;
+          color: #e54747;
+        }
+        .likescount {
+          font-size: xx-large;
+          float: right;
+          color: hotpink;
+        }
+        .unlikescount {
+          font-size: xx-large;
+          float: right;
+          color: #808080;
+        }
+        .message__date {
+          color: gray;
+        }
+        .edit-btn {
+          color: gray;
+        }
+        .delete-btn {
+          color: gray;
+        }
       }
-      .like-btn {
-        font-size: 40px;
-        color: #808080;
-      }
-      .unlike-btn {
-        font-size: 40px;
-        color: #e54747;
-      }
-      .likescount {
-        font-size: xx-large;
-        float: right;
-        color: hotpink;
-      }
-      .unlikescount {
-        font-size: xx-large;
-        float: right;
-        color: #808080;
-      }
-    }
-    .message__date {
-    }
-    .more {
     }
   }
 }

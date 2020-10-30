@@ -1,16 +1,15 @@
 .header {
   height: 200px;
-  width: 100vw;
-  background-color: rgb(245, 246, 245);
+  width: 95vw;
   display: flex;
   align-items: center;
 
   .userface {
-    padding: 20px 0 0 20px;
+    padding: 20px 0 0 30px;
     font-size: 50px;
     color: white;
     img {
-      width: 150px;
+      width: 200px;
     }
   }
   .username {
@@ -27,6 +26,11 @@
     }
   }
   .logout {
+    margin: 0 0 0 auto;
     font-weight: bold;
+    font-size: x-large;
+    .logout-btn {
+      color: gray;
+    }
   }
 }
