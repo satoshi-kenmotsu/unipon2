@@ -2,11 +2,9 @@
   .userface
     %img{alt: "userface", src: "https://jornalzonasul.com.br/wp-content/uploads/2019/03/woman-3096664_1920-1-1024x797.jpg"}/
   .username
-    %h
-    = current_user.name
-    %span
-    さんから仲間への感謝！
-    %p
-    スタッフ同士で感謝を送り合うと報酬に反映されるで〜！
+    %h1
+      = current_user.name
+      %span さん
+    %p から仲間に送った"感謝"
   .logout
     = link_to 'ログアウト', destroy_user_session_path, method: :delete

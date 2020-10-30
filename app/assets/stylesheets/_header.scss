@@ -3,21 +3,30 @@
   width: 100vw;
   background-color: rgb(245, 246, 245);
   display: flex;
+  align-items: center;
 
   .userface {
     padding: 20px 0 0 20px;
     font-size: 50px;
     color: white;
     img {
-      width: 200px;
+      width: 150px;
     }
   }
   .username {
     padding: 20px;
-    font-size: xx-large;
-    font-weight: bold;
-    span {
-      
+    h1 {
+      font-size: xx-large;
+      font-weight: bold;
     }
+      span {
+      font-size: x-large;
+      }
+    p {
+      font-size: x-large;
+    }
+  }
+  .logout {
+    font-weight: bold;
   }
 }
