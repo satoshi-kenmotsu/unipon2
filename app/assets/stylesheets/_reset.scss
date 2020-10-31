@@ -131,3 +131,9 @@ input[type="submit"] {
   -moz-appearance: none;
   appearance: none;
 }
+
+::placeholder {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
