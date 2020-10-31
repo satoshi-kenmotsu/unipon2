@@ -32,6 +32,7 @@
     %p 投稿する
     .input-box__message
       = f.text_area :content, class: 'form__message', placeholder: 'メッセージ'
-    .input-box__title
-      = f.text_field :takername, class: 'form__title', placeholder: '仲間の名前'
-    = f.submit 'おくる', class: 'form__submit'
+    .title-submit
+      .input-box__title
+        = f.text_field :takername, class: 'form__title', placeholder: '仲間の名前（※敬称略）'
+      = f.submit 'おくる', class: 'form__submit'

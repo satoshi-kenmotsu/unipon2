@@ -82,6 +82,7 @@
     font-weight: bold;
     color: gray;
     font-size: xx-large;
+    margin: 20px 0 10px 10px;
   }
 
   textarea {
@@ -90,23 +91,36 @@
     border: solid 5px;
     border-color: #e54747;
     font-size: xx-large;
+    margin-bottom: 20px;
   }
-  
-  input[type="text"] {
-    width: 50%;
-    height: 80px;
-    border: solid 5px;
-    border-color: #e54747;
-    font-size: xx-large;
-    margin-bottom: 10px;
+
+  ::placeholder {
+    padding: 10px 0 0 10px;
   }
-  
-  input[type="submit"] {
-    width: 50%;
-    height: 80px;
-    border-color: white;
-    background-color: #e54747;
-    color: white;
-    font-size: xx-large;
+
+  .title-submit {
+    display: flex;
+
+    input[type="text"] {
+      width: 175%;
+      height: 80px;
+      border: solid 5px;
+      border-color: #e54747;
+      font-size: xx-large;
+    }
+
+    ::placeholder {
+      padding-left: 10px;
+    }
+    
+    input[type="submit"] {
+      margin-left: auto;
+      width: 30%;
+      height: 80px;
+      border-color: white;
+      background-color: #e54747;
+      color: white;
+      font-size: xx-large;
+    }
   }
 }
