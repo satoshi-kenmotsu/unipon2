@@ -55,7 +55,7 @@
         .likescount {
           font-size: xx-large;
           float: right;
-          color: hotpink;
+          color: #e54747;
         }
         .unlikescount {
           font-size: xx-large;
@@ -76,18 +76,24 @@
   }
 }
 
-.form {
-  font-size: xx-large;
-  .input-box {
-    display: flex;
-    flex-direction: column;
-    .form__title {
+form {
+  margin-left: auto;
+  width: 95%;
+}
 
-    }
-    .form__message {
+input[type="text"] {
+  width: 400px;
+  height: 40px;
+  border-color: #e54747;
+}
 
-    }
-    .form__submit {
-    }
-  }
+textarea {
+  width: 600px;
+  height: 100px;
+  border-color: #e54747;
+}
+
+input[type="submit"] {
+  width: 400px;
+  height: 40px;
 }
