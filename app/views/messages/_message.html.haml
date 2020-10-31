@@ -29,9 +29,9 @@
 
 .form
   = form_for [current_user, @message] do |f|
-    .input-box
-      .input-box__title
-        = f.text_field :takername, class: 'form__title', placeholder: '仲間の名前'
-      .input-box__message
-        = f.text_area :content, class: 'form__message', placeholder: 'メッセージ'
+    %p 投稿する
+    .input-box__message
+      = f.text_area :content, class: 'form__message', placeholder: 'メッセージ'
+    .input-box__title
+      = f.text_field :takername, class: 'form__title', placeholder: '仲間の名前'
     = f.submit 'おくる', class: 'form__submit'
