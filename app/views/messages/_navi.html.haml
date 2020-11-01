@@ -3,7 +3,7 @@
     = link_to root_path, class: "contents__btn--home" do
       %i.fas.fa-clinic-medical.fa-6x
   .sending
-    = link_to "https://www.instagram.com/", class: "contents__btn--search" do
+    = link_to root_path(@message.id, anchor: 'new_message'), class: "contents__btn--sending" do
       %i.fas.fa-paper-plane.fa-6x
   .search
     = link_to "https://www.instagram.com/", class: "contents__btn--search" do
