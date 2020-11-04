@@ -5,9 +5,10 @@
     %h1
       = current_user.name
       %span さん
-    %p から仲間に送った"感謝"
+    %p から仲間におくった"感謝"
   .usertotal
-    %h1 TOTAL
-    %p 151 Like
+    %h1 おくった感謝数
+    %p 145
+    %h2 メッセージ
   .logout
     = link_to 'ログアウト', destroy_user_session_path, method: :delete, class: "logout-btn"
