@@ -70,6 +70,7 @@ $(function(){
 
     .fail(function() {
       alert("メッセージ送信に失敗しました");
+      $(".form__submit").removeAttr("disabled");
     });
 
   })
