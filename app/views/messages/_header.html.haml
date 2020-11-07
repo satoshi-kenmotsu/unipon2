@@ -8,7 +8,8 @@
     %p から仲間におくった"感謝"
   .usertotal
     %h1 おくった感謝数
-    %p 145
+    %p
+      = @messages_count
     %h2 メッセージ
   .logout
     = link_to 'ログアウト', destroy_user_session_path, method: :delete, class: "logout-btn"

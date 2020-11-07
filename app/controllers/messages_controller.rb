@@ -3,6 +3,7 @@ class MessagesController < ApplicationController
   def index
     @message = Message.new
     @messages = current_user.messages
+    @messages_count = Message.where(id: @messages.ids).count
   end
 
   def create
