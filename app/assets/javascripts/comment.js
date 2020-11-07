@@ -69,7 +69,7 @@ $(function(){
     })
 
     .fail(function() {
-      alert("メッセージ送信に失敗しました");
+      alert("「メッセージ」「仲間の名前」を確認！");
       $(".form__submit").removeAttr("disabled");
     });
 
