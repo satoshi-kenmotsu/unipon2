@@ -69,7 +69,7 @@ $(function(){
     })
 
     .fail(function() {
-      alert("「メッセージ」「仲間の名前」を確認！");
+      alert("※「メッセージ」「仲間の名前」を要確認！");
       $(".form__submit").removeAttr("disabled");
     });
 
