@@ -1,11 +1,15 @@
 .header
   .userface
     %img{alt: "userface", src: "https://jornalzonasul.com.br/wp-content/uploads/2019/03/woman-3096664_1920-1-1024x797.jpg"}/
-  .username
-    %h1
-      = current_user.name
-      %span さん
-    %p から仲間におくった"感謝"
+  .userbelong
+    .grouplist
+      %h1
+        TECH::EXPERT なんば校
+    .username
+      %h1
+        = current_user.name
+        %span さん
+      %p から仲間におくった"感謝"
   .usertotal
     %h1 おくった感謝数
     %p

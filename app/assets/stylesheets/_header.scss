@@ -15,20 +15,34 @@
       width: 200px;
     }
   }
-  .username {
-    padding: 20px;
-    h1 {
-      font-size: xx-large;
-      font-weight: bold;
-    }
-      span {
-      font-size: x-large;
+
+  .userbelong {
+    .grouplist {
+      padding: 20px;
+      h1 {
+        font-size: x-large;
+        font-weight: bold;
       }
-    p {
-      font-size: x-large;
+        span {
+        font-size: large;
+        }
+    }
+
+    .username {
+      padding: 20px;
+      h1 {
+        font-size: xx-large;
+        font-weight: bold;
+      }
+        span {
+        font-size: x-large;
+        }
+      p {
+        font-size: x-large;
+      }
     }
   }
-  
+
   .usertotal {
     text-align: center;
     padding-left: 50px;
