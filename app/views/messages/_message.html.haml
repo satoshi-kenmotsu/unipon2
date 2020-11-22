@@ -34,5 +34,5 @@
       = f.text_area :content, class: 'form__message', placeholder: '今日はお客様が来店した時に手伝ってくれて助かりました。ありがとう！'
     .title-submit
       .input-box__title
-        = f.collection_select :takername, Message.all, :takername, :takername, include_blank: "仲間の名前"
+        = f.collection_select :id, User.all, :name, :name, include_blank: "仲間の名前"
       = f.submit 'おくる', class: 'form__submit'

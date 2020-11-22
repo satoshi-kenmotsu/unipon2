@@ -4,6 +4,7 @@ class MessagesController < ApplicationController
     @message = Message.new
     @messages = current_user.messages.includes(:user)
     @messages_count = Message.where(id: @messages.ids).count
+    @user = User.all
   end
 
   def create
@@ -37,7 +38,7 @@ class MessagesController < ApplicationController
   private
 
   def message_params
-    params.require(:message).permit(:content, :image, :takername).merge(user_id: current_user.id)
+    params.require(:message).permit(:content, :image, :name, :id).merge(user_id: current_user.id)
   end
 
 end
