@@ -4,12 +4,10 @@ class MessagesController < ApplicationController
     @message = Message.new
     @messages = current_user.messages.includes(:user)
     @messages_count = Message.where(id: @messages.ids).count
-    @user = User.all
   end
 
   def create
-    @user = User.find(params[:user_id])
-    @message = @user.messages.new(message_params)
+    @message = current_user.messages.new(message_params)
     if @message.save
       respond_to do |format|
         format.json
@@ -38,7 +36,7 @@ class MessagesController < ApplicationController
   private
 
   def message_params
-    params.require(:message).permit(:content, :image, :name, :id).merge(user_id: current_user.id)
+    params.require(:message).permit(:content, :image).merge(user_id: current_user.id)
   end
 
 end
