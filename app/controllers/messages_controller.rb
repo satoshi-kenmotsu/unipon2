@@ -2,7 +2,7 @@ class MessagesController < ApplicationController
 
   def index
     @message = Message.new
-    @messages = current_user.messages.includes(:user)
+    @messages = Message.all.includes(:user)
     @messages_count = Message.where(id: @messages.ids).count
   end
 
